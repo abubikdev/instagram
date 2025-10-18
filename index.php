@@ -67,6 +67,7 @@ $posts = [
 </aside>
 -->
 
+
 <div class="feed">
     <?php foreach ($posts as $post): ?>
         <div class="post">
