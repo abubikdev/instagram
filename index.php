@@ -3,31 +3,34 @@ $posts = [
     [
         'user' => 'franta',
         'avatar' => 'https://i.pinimg.com/1200x/75/cd/8e/75cd8e884849449716e5a4485a7088a3.jpg',
-        'image' => 'https://i.pinimg.com/736x/5d/a8/29/5da82972556f833ca752edfeae422e3a.jpg',
+        'post time' => '2h',
+        'image' => 'https://i.pinimg.com/736x/0f/d5/da/0fd5dae8a8de780cd47ba34ac75ba5ff.jpg',
         'likes' => 67,
-        'caption' => 'perfect view',
+        'caption' => 'Halloween is coming!',
         'comments' => [
-            ['author' => 'agi', 'content' => 'So beatiful!']
+            ['author' => 'Sidney', 'content' => 'Another Halloween, another scream..']
         ],
         'time' => '2 hours ago'
     ],
     [
         'user' => 'lara',
         'avatar' => 'https://i.pinimg.com/736x/82/98/a9/8298a96bb6dabc95e45c8c34c39caa5f.jpg',
-        'image' => 'https://i.pinimg.com/736x/9d/2a/f8/9d2af8140f1d9dd93a9c7b134aaf8bd5.jpg',
+        'post time' => '15h',
+        'image' => 'https://i.pinimg.com/736x/dc/30/16/dc301650dc750536b3363cc89e73dfe8.jpg',
         'likes' => 69,
-        'caption' => 'i love this view',
+        'caption' => 'Survival isn’t pretty. It’s powerful.',
         'comments' => [
-            ['author' => 'croft', 'content' => 'WOW!']
+            ['author' => 'Alex Weiss', 'content' => 'WOW!']
         ],
         'time' => '3 hours ago'
     ],
     [
         'user' => 'skif',
         'avatar' => 'https://i.pinimg.com/736x/0d/2d/b9/0d2db9ec70bcc25255eb7e4e4f85b3f6.jpg',
+        'post time' => '20h',
         'image' => 'https://i.pinimg.com/736x/7b/5e/88/7b5e882617b47516bafcffb74d1976c5.jpg',
         'likes' => 369,
-        'caption' => 'poppy field',
+        'caption' => 'Beautiful poppy field',
         'comments' => [
             ['author' => 'German', 'content' => 'I love Pripyat!']
         ],
@@ -44,18 +47,43 @@ $posts = [
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
     <title>Instagram</title>
 </head>
 <body>
+
+<!--
+<aside class="sidebar">
+    <h1 class="logo">FakeIG</h1>
+    <nav>
+        <i class="ri-home-5-line">Home</i>
+        <i class="ri-search-line">Search</i>
+        <i class="ri-send-plane-line">Messages</i>
+        <i class="ri-heart-line">Notifications</i>
+        <i class="ri-add-box-line">Create</i>
+        <img src="https://i.pinimg.com/736x/bf/bb/d1/bfbbd1bd4de78b81c7bf0e3d8a7e9ef5.jpg" alt="Profil"
+             class="profile-img"> <span>Profile</span>
+    </nav>
+</aside>
+-->
+
 <div class="feed">
     <?php foreach ($posts as $post): ?>
         <div class="post">
             <div class="post-header">
                 <img src="<?php echo $post['avatar']; ?>" alt="avatar" class="avatar">
                 <span class="username"><?php echo $post['user']; ?> </span>
+                <span class="post-time">• <?php echo $post['post time']; ?></span>
+                <span class="post-menu">...</span>
             </div>
 
             <img src="<?php echo $post['image']; ?>" alt="post img" class="main">
+
+            <div class="icons">
+                <i class="ri-heart-line"></i>
+                <i class="ri-chat-1-line"></i>
+                <i class="ri-send-plane-line"></i>
+            </div>
 
             <p class="text-likes"><?php echo $post['likes']; ?> likes</p>
             <p class="text"><strong><?php echo $post['user'] ?> </strong><?php echo $post['caption'] ?></p>

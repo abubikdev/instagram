@@ -4,6 +4,35 @@ body {
     display: flex;
     justify-content: center;
     padding: 40px;
+    margin: 0;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    height: 100%;
+}
+
+.logo {
+    font-size: 33px;
+    margin-bottom: 20px;
+}
+
+.sidebar-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .feed {
@@ -22,7 +51,7 @@ body {
 .post-header {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 13px;
 }
 
 .avatar {
@@ -39,10 +68,32 @@ body {
     margin-right: 10px;
 }
 
+.post-time {
+    display: flex;
+    color: #999;
+}
+
+
+//FIXME: Opravit později
+.post-menu {
+    font-weight: bold;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
 .post img.main {
     width: 100%;
     display: block;
 }
+
+.icons {
+    font-size: 27px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
 
 .post-actions {
     margin: 10px 15px;
@@ -56,8 +107,7 @@ body {
 
 .text-likes {
     font-weight: bold;
-    margin-right: 20px;
-
+    margin-left: 15px;
 }
 
 .text strong {
