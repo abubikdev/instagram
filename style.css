@@ -134,3 +134,26 @@ body {
     font-size: 13px;
     margin: 0 15px 15px;
 }
+
+/* Sidebar */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: "Inter Display", "Inter";
+}
+
+/* ensure nav labels use Inter (won't affect icon font on the <i>) */
+nav .nav-label,
+nav span {
+    font-family: "Inter Display", "Inter", system-ui, sans-serif;
+    margin-left: 2px;
+}
+
+i {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+}
