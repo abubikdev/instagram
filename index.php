@@ -52,7 +52,7 @@ $posts = [
 </head>
 <body>
 
-<!--
+
 <aside class="sidebar">
     <h1 class="logo">FakeIG</h1>
     <nav>
@@ -65,16 +65,22 @@ $posts = [
              class="profile-img"> <span>Profile</span>
     </nav>
 </aside>
--->
+
 
 
 <div class="feed">
     <?php foreach ($posts as $post): ?>
         <div class="post">
             <div class="post-header">
-                <img src="<?php echo $post['avatar']; ?>" alt="avatar" class="avatar">
-                <span class="username"><?php echo $post['user']; ?> </span>
-                <span class="post-time">• <?php echo $post['post time']; ?></span>
+                <div class="user-post-info">
+                    <div>
+                        <img src="<?php echo $post['avatar']; ?>" alt="avatar" class="avatar">
+                    </div>
+                    <div class="username-and-post-time">
+                        <span class="username"><?php echo $post['user']; ?> </span>
+                        <span class="post-time">• <?php echo $post['post time']; ?></span>
+                    </div>
+                </div>
                 <span class="post-menu">...</span>
             </div>
 
